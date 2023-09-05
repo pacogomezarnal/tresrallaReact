@@ -1,5 +1,16 @@
 function Square({ value }) {
-  return <button className="square">{value}</button>;
+  function handleClick() {
+    console.log('clicked!');
+  }
+
+  return (
+    <button
+      className="square"
+      onClick={handleClick}
+    >
+      {value}
+    </button>
+  );
 }
 
 export default function Board() {
@@ -15,7 +26,7 @@ export default function Board() {
         <Square value="5" />
         <Square value="6" />
       </div>
-      <div className="board-row">
+      <div className="board-row"> 
         <Square value="7" />
         <Square value="8" />
         <Square value="9" />
